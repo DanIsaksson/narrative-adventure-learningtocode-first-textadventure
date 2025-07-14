@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CrimsonRoom")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+855019de2d8559fbc8be9761c009acbd593c6f98")]
 [assembly: System.Reflection.AssemblyProductAttribute("CrimsonRoom")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CrimsonRoom")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
