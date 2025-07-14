@@ -6,7 +6,7 @@
 - [x] Phase 1: Your Developer Cockpit
 - [x] Phase 2: Building the World (Core Language & Structure)
 - [x] Phase 3: Creating a Dynamic World
-- [ ] Phase 4: Refactoring for a Scalable World
+- [ ] Phase 4: Refactoring for a Scalable World (IN PROGRESS)
 - [ ] Phase 5: Making the Game Robust
 - [ ] Phase 6: Exploring the .NET Toolbox
 

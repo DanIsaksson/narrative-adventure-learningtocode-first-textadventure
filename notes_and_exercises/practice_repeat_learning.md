@@ -33,3 +33,27 @@
 
 4.  **Test it**:
     -   In your `Program.cs` `Main` method (or a temporary new project), create a few different `Monster` instances and pass them to your `Announce` method to see the output.
+
+### Exercise 2: Blueprint vs. Cookie
+
+**Goal**: Cement the mental model of **class vs. instance** and the role of the **constructor**.
+
+1.  Create a `CookieCutter` class with one property `Shape` (string).
+2.  Create a constructor that sets `Shape`.
+3.  In `Program.cs`, instantiate three different cutters ("Star", "Circle", "Heart").
+4.  Print each instance's `Shape` to show they share the *blueprint* but hold their *own* data.
+5.  (Stretch) Add a static field `public static int TotalCuttersMade` and increment it inside the constructor. Print the total to see static vs. instance in action.
+
+### Exercise 3: Naming Make-over
+
+**Goal**: Practice spotting and correcting naming issues.
+
+1.  Copy the following snippet into a scratch file:
+    ```csharp
+    public class door {
+        public string color;
+        public bool islocked;
+    }
+    ```
+2.  Fix every naming violation based on C# conventions **without** changing functionality.
+3.  Explain (in comments) *why* each change was made (e.g., "Classes use PascalCase").

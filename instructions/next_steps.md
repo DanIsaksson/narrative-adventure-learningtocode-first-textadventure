@@ -1,36 +1,33 @@
 # 🎯 Next Steps
 
-## Phase 2: Building the World
-- [ ] Implement the `Player` class in `Player.cs` with `Name` and `Health` properties and a constructor.
-- [ ] Write two additional simple classes (`Potion`, `Door`), each with ≥2 properties and a constructor; instantiate them in `Program.cs` and print their property values.
+## Phase 4: Refactoring for a Scalable World *(IN PROGRESS)*
 
-## Phase 2: Methods Practice
-- [ ] Create a `DisplayRoomInfo(Room room)` method in `Program.cs` and call it from `Main`.
-- [ ] (Optional) Add a `Heal(int amount)` method on `Player` and invoke it in your game loop.
+1. **Standardize Naming Conventions**
+   - Rename all properties and fields to **PascalCase** (e.g., `Door.color` ➜ `Door.Color`, `Door.lockStatus` ➜ `Door.LockStatus`).
+   - Update every reference throughout the codebase.
 
-## Preparing for Phase 3
-- [ ] Read about abstract classes and inheritance (e.g. `Item`/`Key`) so you're ready to build the inventory system next.
+2. **Finalize the Item Hierarchy**
+   - Ensure `Item` remains `abstract` with `public abstract void Use(Player player);`.
+   - Make `HealingItem` inherit from `Item` and `override` `Use` without redundant property re-assignments.
+   - Migrate `Player.Inventory` to `List<Item>` everywhere (remove remaining `List<string>` usages).
 
-## Phase 4: Refactoring for a Scalable World (OOP)
+3. **Interface-Driven Area Interactions**
+   - Create `IInteractable` with `void Interact(Player player);`.
+   - Refactor each file in `/areas` to a concrete class implementing `IInteractable` instead of static classes.
+   - Replace calls like `invDrawer.drawerInvestigate(thePlayer);` with `new Drawer().Interact(thePlayer);` in the main loop.
 
-Your next goal is to apply Object-Oriented Programming (OOP) principles. This will make your game's code more organized and easier to expand. We will start with `abstract` classes.
+4. **Extract the Game Loop**
+   - Move the `while (currentMode != GameState.Quit)` loop from `Program.cs` into a new `GameEngine` class: `public void Run()`. Keep `Program.Main` as a thin entry point.
+   - Add graceful exit by setting `currentMode = GameState.Quit` inside `GameEngine` instead of breaking from nested switches.
 
-**Reading:** C# Player's Guide, Part 2: Object-Oriented Programming
+5. **Polish & Testing**
+   - Add at least two unit tests (using `dotnet test`) that verify:
+     1. `HealingItem.Use` increases `Player.Health`.
+     2. `Drawer.Interact` adds one item to `Player.Inventory`.
+   - Manually play-test to ensure no null-reference or input parsing crashes occur.
 
-### Tasks
-1.  **Refactor `Item.cs` into an `abstract` class.**
-    -   An `abstract` class provides a base definition but cannot be instantiated itself. It's a perfect blueprint.
-    -   Add an `abstract` method to it called `public abstract void Use(Player player);`. This forces any class that inherits from `Item` to define how it is "used".
+---
 
-2.  **Create a specific item that inherits from `Item`.**
-    -   Create a new file, `Key.cs`.
-    -   The `Key` class should inherit from your new `abstract Item` class.
-    -   You will be required to `override` the `Use` method. For now, just have it print a message like `"You wave the key around uselessly."`
-
-3.  **Update `invDrawer.cs` to give the Player a `Key` instead of a `Small Potion`.**
-    - This will allow us to test the new system. You will need to change this line:
-    `thePlayer.PlayerInventory.Add(new Item("Small Potion", ...));`
-    - To this:
-    `thePlayer.PlayerInventory.Add(new Key("Old Rusty Key", "An old, heavy iron key."));`
-
-Once these steps are done, the foundation for a much more robust item system will be in place.
+### Reading & Practice Before Next Session
+- Skim C# Docs on *Properties* (`get; set;` syntax) and *Interfaces*.
+- Re-read the upcoming "Chapter Outline" and prepare questions on any unclear sections.
