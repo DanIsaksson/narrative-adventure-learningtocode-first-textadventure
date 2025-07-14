@@ -1,0 +1,41 @@
+private static GameState ChoiceToState()
+{
+	while(true)
+	{
+		Console.WriteLine(@" 
+		""So... hehe... what to do..?""
+
+		It's that voice again. You feel an urge to inspect something.
+		Enter the letter of your choice. Do you inspect the...
+		A) ... bed?\n
+		B) ... drawer?
+		C) ... window?
+		D) ... closet?
+		E) ... mirror?
+		F) ... clock?
+		G) ... door?
+		H) ... nothing?
+		" );
+
+		string inspectChoice = Console.ReadLine();
+
+		inspectChoice = false;
+		switch(inspectChoice)
+		{
+			case "A": return GameState.eBed;
+			case "B": return GameState.eDrawer;
+			case "C": return GameState.eWindow;
+			case "D": return GameState.eCloset;
+			case "E": return GameState.eMirror;
+			case "F": return GameState.eClock;
+			case "G": return GameState.eExitDoor;
+			case "H": 
+				Console.WriteLine(@" ""Scared are we? Hehe... I have all day... year even.""");
+				break;
+			default:
+				Console.WriteLine("Haha, very funny... Try again.");
+				break;
+		}
+	}
+	return currentMode;
+}

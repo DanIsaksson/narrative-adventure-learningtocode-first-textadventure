@@ -1,0 +1,10 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+1. Keep the [study_plan.md](mdc:instructions/study_plan.md) file up-to-date.
+
+2. As the student progresses, update [next_steps.md](mdc:instructions/next_steps.md) by deleting irrelevant material and adding what we're about to do.
+
+3. Add various exercises to [practice_repeat_learning.md](mdc:notes_and_exercises/practice_repeat_learning.md) that will make sure the user both gets to try new approaches to things they've already learned as well as just repeat coding classes, methods, etc. that we've used before to better rememebr them in the future.

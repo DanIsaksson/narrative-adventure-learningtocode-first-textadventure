@@ -1,0 +1,5 @@
+F:\Code Projects\00 Study 00\C#\lesson_1\dotnetfiddle\CrimsonRoom\bin\Release\net9.0\publish\CrimsonRoom.exe
+F:\Code Projects\00 Study 00\C#\lesson_1\dotnetfiddle\CrimsonRoom\bin\Release\net9.0\publish\CrimsonRoom.dll
+F:\Code Projects\00 Study 00\C#\lesson_1\dotnetfiddle\CrimsonRoom\bin\Release\net9.0\publish\CrimsonRoom.deps.json
+F:\Code Projects\00 Study 00\C#\lesson_1\dotnetfiddle\CrimsonRoom\bin\Release\net9.0\publish\CrimsonRoom.runtimeconfig.json
+F:\Code Projects\00 Study 00\C#\lesson_1\dotnetfiddle\CrimsonRoom\bin\Release\net9.0\publish\CrimsonRoom.pdb
